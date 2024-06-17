@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Providers } from './providers';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from './screens/home';
 import AppContainer from './providers/app-container/app-container';
 
 const styles = StyleSheet.create({
