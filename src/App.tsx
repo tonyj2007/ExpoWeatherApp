@@ -1,6 +1,9 @@
-import { ReactElement } from 'react';
-import { StyleSheet, Text } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Providers } from './providers';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Home from './screens/home';
+import AppContainer from './providers/app-container/app-container';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,15 +22,12 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function App() {
+export const App = () => {
+  const Tabs = createBottomTabNavigator();
+
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
-        <Text style={styles.emoji}>😻</Text>
-        <Text style={styles.text}>
-          I should really add some actual code now the project is all set up
-        </Text>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <Providers>
+      <AppContainer />
+    </Providers>
   );
-}
+};

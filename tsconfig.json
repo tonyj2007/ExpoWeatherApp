@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
+    "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
-      "@src/*": [
-        "src/*"
-      ]
+      "@src/*": ["src/*"]
     }
   },
   "extends": "expo/tsconfig.base",
-  "include": [
-    "."
-  ]
+  "include": ["."]
 }
